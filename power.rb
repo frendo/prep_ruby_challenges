@@ -1,14 +1,14 @@
-def power(a, b)
+def power(base, exponent)
 	result = 1
-	for i in 0...b
-		result = result * a
+	for i in 0...exponent
+		result = result * base
 	end
 	return result
 end
 
-def factorial(a)
+def factorial(num)
 	result = 1
-	for i in 1..a
+	for i in 1..num
 		result = result * i
 	end
 	return result
@@ -25,18 +25,18 @@ def uniques(a)
 	return result
 end
 
-def combinations(a, b)
+def combinations(a, a2)
 	result = Array.new	
 	a.each do |prefix|
-		b.each do |suffix|
+		a2.each do |suffix|
 			result.push(prefix + suffix)
 		end
 	end
 	return result
 end
 
-def is_prime?(a)
-	(2..Math.sqrt(a)).each { |i| return false if a % i == 0}
+def is_prime?(num)
+	(2..Math.sqrt(num)).each { |i| return false if num % i == 0}
 	true
 end
 
